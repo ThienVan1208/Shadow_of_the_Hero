@@ -1,0 +1,1171 @@
+fileFormatVersion: 2
+guid: 5e767dc78e5d0aa489fd0428f4785502
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b5cf519fcfb494498d9fbb5c9aef5f
+      internalID: 1271937710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929024b42978c1240b9f757535293b6c
+      internalID: 283938748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b45509eddad7504ba690d71d06ef0ed
+      internalID: 897823334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c796d59fdf9ba14dae9ce4dee6ae133
+      internalID: -80843027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_4
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 435
+        width: 41
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9df431158cf0743bb3a70f66295928
+      internalID: -1432886347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_5
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518d17fd9b688e04385c17580b27a84d
+      internalID: 1550489151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_6
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5edc0337c22a804e96c257ecec9be44
+      internalID: 743066833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_7
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b70adfcd4630624ea3af8aa1f0cb791
+      internalID: -1481487747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_8
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 435
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b15965d490b59342bd0de0ffa343c85
+      internalID: 1875564789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_9
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5695caf22865304b8656379d2a21348
+      internalID: 155150226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_10
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5a4e75f5f9b68468d203f3078389ba
+      internalID: -1987021312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_11
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 436
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817bec3aba4c44a4f892add972996187
+      internalID: 1764755775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_12
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 436
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c1b046b71d3c3448eaabc3d6b26352
+      internalID: 1926250305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_13
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 436
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61537905bd635084e9c4befd8376e12d
+      internalID: -1549446869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_14
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5c76ae5883ae1478b3e4ef87f4bc64
+      internalID: 1967814520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_15
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 435
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35425f25a2f725340927346a0663f23b
+      internalID: 1195364149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_16
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 329
+        width: 43
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51561464bc81ad64fabefaa14464c652
+      internalID: 231529437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_17
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 325
+        width: 57
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb799f35acd1474da6daaff1d9abf86
+      internalID: -1013736549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_18
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 320
+        width: 57
+        height: 71
+      alignment: 9
+      pivot: {x: 0.4937401, y: 0.2839128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ffd35d730fc5f4aa3c4651d9f7cfee
+      internalID: -436970748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 307
+        width: 58
+        height: 84
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0004874674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbbe268158a57745b2bdb9c0142ec8a
+      internalID: 1832848269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_20
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 315
+        width: 41
+        height: 83
+      alignment: 9
+      pivot: {x: 0.5174047, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ee98e2e2779524cb846ffb1ed2d7d0
+      internalID: -2016398784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 317
+        width: 41
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd45a568d18af54c9aab836d400bd03
+      internalID: -1239076004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_22
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 316
+        width: 41
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5585ef147df51fd43a1252a897595d48
+      internalID: -97505552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_23
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 48
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9d28b591fcccc44baa47d85f3d312c
+      internalID: 1825266315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_24
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 50
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbdbf5af85ebc949a3b6a01d4e61625
+      internalID: 1101898343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_25
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3085b7fd21e63c84f8b07ade38f79ac5
+      internalID: -1834669403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_26
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdcb22b8fba98f44b496bfd3e21f05c
+      internalID: 1633673664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_27
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f619d9974eeccf42ad4fa9afb1b5e35
+      internalID: -1635317677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df5c9a769406c94ab1ac7e26359ed64
+      internalID: -1367885857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_29
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 418
+        width: 42
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a426da9e448281b4291ef68f522f70df
+      internalID: -178505079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_30
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a211f48467d084aadb7f23921c69b6
+      internalID: -1939414350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_31
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d5a60cc79bd9c4c83dbf91222f3da7
+      internalID: -106510117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_32
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97def94e54e038d408ad707ed65e49c8
+      internalID: 1385698061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_33
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 418
+        width: 42
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a8657a9b1ad3541bb452719fdc49a6
+      internalID: -821520552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_34
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a437ab27f91fb4ea38a5d37e805042
+      internalID: 1458493081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_35
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525e59d328599e34a92966a7095ec433
+      internalID: 1331910121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_36
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d723ded51f79de746846a53ef9bd5481
+      internalID: 1045055913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_37
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f17d0f84ae674d40b2788047c9ab80d
+      internalID: -43383556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_38
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454679afb6faf88468cf2006290a27fe
+      internalID: 1077123379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_39
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac937a52f3ab6346a5fa5ef9107f701
+      internalID: 1875236782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_40
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 418
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92aead47a3709d499a05f423c5d6922
+      internalID: 1272281099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_41
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 316
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10258874da701074fa39a9166bc0d858
+      internalID: -1763905035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_42
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 316
+        width: 57
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e3bc73bf0ed824799f45dbd9873eb1
+      internalID: -682770432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_43
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 312
+        width: 57
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7051195950eca8246aab7f3063c5bd5c
+      internalID: -604303786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 316
+        width: 58
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a0953b0535b2d4dbb5ae8c78250c61
+      internalID: 2090695048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_45
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 298
+        width: 41
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294100e62eb30a44d89b19d17aec948a
+      internalID: 140830726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_46
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 298
+        width: 42
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03421b72fb2fce040811babf82819bf5
+      internalID: 1117855503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Lost Ruins - Demon Warlock_47
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 298
+        width: 41
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947c6c7a3e415954299c4ce15e586418
+      internalID: -1686785479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - Lost Ruins - Demon Warlock_0: 1271937710
+      PC Computer - Lost Ruins - Demon Warlock_1: 283938748
+      PC Computer - Lost Ruins - Demon Warlock_10: -1987021312
+      PC Computer - Lost Ruins - Demon Warlock_11: 1764755775
+      PC Computer - Lost Ruins - Demon Warlock_12: 1926250305
+      PC Computer - Lost Ruins - Demon Warlock_13: -1549446869
+      PC Computer - Lost Ruins - Demon Warlock_14: 1967814520
+      PC Computer - Lost Ruins - Demon Warlock_15: 1195364149
+      PC Computer - Lost Ruins - Demon Warlock_16: 231529437
+      PC Computer - Lost Ruins - Demon Warlock_17: -1013736549
+      PC Computer - Lost Ruins - Demon Warlock_18: -436970748
+      PC Computer - Lost Ruins - Demon Warlock_19: 1832848269
+      PC Computer - Lost Ruins - Demon Warlock_2: 897823334
+      PC Computer - Lost Ruins - Demon Warlock_20: -2016398784
+      PC Computer - Lost Ruins - Demon Warlock_21: -1239076004
+      PC Computer - Lost Ruins - Demon Warlock_22: -97505552
+      PC Computer - Lost Ruins - Demon Warlock_23: 1825266315
+      PC Computer - Lost Ruins - Demon Warlock_24: 1101898343
+      PC Computer - Lost Ruins - Demon Warlock_25: -1834669403
+      PC Computer - Lost Ruins - Demon Warlock_26: 1633673664
+      PC Computer - Lost Ruins - Demon Warlock_27: -1635317677
+      PC Computer - Lost Ruins - Demon Warlock_28: -1367885857
+      PC Computer - Lost Ruins - Demon Warlock_29: -178505079
+      PC Computer - Lost Ruins - Demon Warlock_3: -80843027
+      PC Computer - Lost Ruins - Demon Warlock_30: -1939414350
+      PC Computer - Lost Ruins - Demon Warlock_31: -106510117
+      PC Computer - Lost Ruins - Demon Warlock_32: 1385698061
+      PC Computer - Lost Ruins - Demon Warlock_33: -821520552
+      PC Computer - Lost Ruins - Demon Warlock_34: 1458493081
+      PC Computer - Lost Ruins - Demon Warlock_35: 1331910121
+      PC Computer - Lost Ruins - Demon Warlock_36: 1045055913
+      PC Computer - Lost Ruins - Demon Warlock_37: -43383556
+      PC Computer - Lost Ruins - Demon Warlock_38: 1077123379
+      PC Computer - Lost Ruins - Demon Warlock_39: 1875236782
+      PC Computer - Lost Ruins - Demon Warlock_4: -1432886347
+      PC Computer - Lost Ruins - Demon Warlock_40: 1272281099
+      PC Computer - Lost Ruins - Demon Warlock_41: -1763905035
+      PC Computer - Lost Ruins - Demon Warlock_42: -682770432
+      PC Computer - Lost Ruins - Demon Warlock_43: -604303786
+      PC Computer - Lost Ruins - Demon Warlock_44: 2090695048
+      PC Computer - Lost Ruins - Demon Warlock_45: 140830726
+      PC Computer - Lost Ruins - Demon Warlock_46: 1117855503
+      PC Computer - Lost Ruins - Demon Warlock_47: -1686785479
+      PC Computer - Lost Ruins - Demon Warlock_48: -1209385570
+      PC Computer - Lost Ruins - Demon Warlock_5: 1550489151
+      PC Computer - Lost Ruins - Demon Warlock_6: 743066833
+      PC Computer - Lost Ruins - Demon Warlock_7: -1481487747
+      PC Computer - Lost Ruins - Demon Warlock_8: 1875564789
+      PC Computer - Lost Ruins - Demon Warlock_9: 155150226
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

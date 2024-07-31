@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Intro1.unity
+    guid: 596bae178e1375a45a84eeaca087acc8
+  - enabled: 1
+    path: Assets/Scenes/Village.unity
+    guid: 4fd95db05783f614f83a2933139a3b00
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: afb7c1bdae9baa14ebea843b5d4fd1ce
+  - enabled: 1
+    path: Assets/Scenes/ForestDark.unity
+    guid: 349c9d725480add4d8a6ac0ea0d1e4af
+  - enabled: 1
+    path: Assets/Scenes/Intro2.unity
+    guid: 93c9d55d62c954147aba6badd781b57c
+  - enabled: 1
+    path: Assets/Scenes/VilDark.unity
+    guid: 21b88f34ffe35d944a27068f4f35f20b
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 3cdf6bef0d73c2e4e814e1e216f7c745
+  - enabled: 1
+    path: Assets/Scenes/Begin.unity
+    guid: 8760503d0718bfd429ee87dc19486443
+  - enabled: 1
+    path: Assets/Scenes/Dungeon.unity
+    guid: 2be30962d94a4c545ba4d937da5a7bca
+  - enabled: 1
+    path: Assets/Scenes/Dungeon1.unity
+    guid: 5d4caef8de797414c9e3cbbd387e95fe
+  - enabled: 1
+    path: Assets/Scenes/Dung1-2.unity
+    guid: 1277d6f94975b6a4d9b983dfb8f5520a
+  - enabled: 1
+    path: Assets/Scenes/Intro4.unity
+    guid: f4617d4db0dc3d04f81c17a99c40edf4
+  - enabled: 1
+    path: Assets/Scenes/Dungeon2.unity
+    guid: 9338d9d59e884f6459ffad1955908526
+  m_configObjects: {}
