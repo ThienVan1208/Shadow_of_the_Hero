@@ -62,7 +62,7 @@ public class MainControl : MonoBehaviour
     
     private void Update()
     {
-        Debug.Log("value hp:" + slidHP.value);
+        
         if (!is_death)
         {
             if (!ATKForUI)

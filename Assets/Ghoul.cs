@@ -131,8 +131,8 @@ public class Ghoul : MonoBehaviour, AttackInterface
     public IEnumerator follow()
     {
 
-        Vector2 follow = player.transform.position - transform.position;
-        rb.velocity = new Vector2(follow.x * speed, follow.y * speed) * Time.deltaTime;
+        Vector2 follow = (player.transform.position - transform.position).normalized;
+        rb.velocity = new Vector2(follow.x * speed, follow.y * speed);
         animator.SetFloat("speed", 1);
         if (follow.x > 0)
         {

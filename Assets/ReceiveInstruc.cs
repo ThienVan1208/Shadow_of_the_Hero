@@ -61,7 +61,7 @@ public class ReceiveInstruc : MonoBehaviour
         }
         else if ( Input.GetKeyDown(KeyCode.Escape))
         {
-            paper.SetActive(false);
+            paper.GetComponent<Animator>().SetTrigger("close");
             isPaper = false;
         }
     }

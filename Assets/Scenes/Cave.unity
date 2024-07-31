@@ -545,6 +545,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4436915671499116800, guid: 6386eb03339fdac4b80c18a2ffd0f2d9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1b66e4c76f79e0645b09e3b374cc7606, type: 2}
     - target: {fileID: 5250421792538770241, guid: 6386eb03339fdac4b80c18a2ffd0f2d9, type: 3}
       propertyPath: m_Name
       value: Crystal
@@ -3073,7 +3077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &804966824
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -37,7 +37,7 @@ public class DialogManager : MonoBehaviour
        
         dialogText.text = sentence;
 
-        StartCoroutine(DisplayNextSentenceAfterDelay(2f)); // Adjust the delay time as needed
+        StartCoroutine(DisplayNextSentenceAfterDelay(10f)); // Adjust the delay time as needed
     }
 
     IEnumerator DisplayNextSentenceAfterDelay(float delay)

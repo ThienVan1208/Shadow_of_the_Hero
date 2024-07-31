@@ -45,3 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boss: 1
+  gm_hp: 20
+  gm_atk: 2
+  gm_mana: 5
+  gm_skill: 5

@@ -990,6 +990,8 @@ GameObject:
   - component: {fileID: 7334753533225169905}
   - component: {fileID: 3797986076780283717}
   - component: {fileID: 7945163163939405816}
+  - component: {fileID: 1498962766414489291}
+  - component: {fileID: 6265209249631100793}
   m_Layer: 0
   m_Name: AxeRat
   m_TagString: Untagged
@@ -1217,6 +1219,35 @@ MonoBehaviour:
   die: {fileID: 1130545979825968403}
   hit: {fileID: 1568624164835506493}
   walk: {fileID: 9122220546249702293}
+--- !u!114 &1498962766414489291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011362908554364920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2baf53cc2b85aa41a8a8de6de937283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  rigid: {fileID: 7334753533225169905}
+  force: 5
+  time: 0.1
+--- !u!114 &6265209249631100793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011362908554364920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498a9263fbc283649b0a839ef0a504c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expPrefab: {fileID: 2820684935990195507, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
 --- !u!1 &9049857118364484355
 GameObject:
   m_ObjectHideFlags: 0

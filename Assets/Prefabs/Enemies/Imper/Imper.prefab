@@ -913,6 +913,8 @@ GameObject:
   - component: {fileID: 9139066420598511930}
   - component: {fileID: 3108645092714910603}
   - component: {fileID: 3912592684242772823}
+  - component: {fileID: 5121420521859276968}
+  - component: {fileID: 256447789666899969}
   m_Layer: 0
   m_Name: Imper
   m_TagString: Untagged
@@ -1139,6 +1141,35 @@ MonoBehaviour:
   die: {fileID: 7588804864668856255}
   hit: {fileID: 4055432272952335088}
   walk: {fileID: 7468661829049913759}
+--- !u!114 &5121420521859276968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342104447030811070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2baf53cc2b85aa41a8a8de6de937283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  rigid: {fileID: 2502409513198709509}
+  force: 5
+  time: 0.1
+--- !u!114 &256447789666899969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342104447030811070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498a9263fbc283649b0a839ef0a504c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expPrefab: {fileID: 2820684935990195507, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
 --- !u!1 &7725554152730465286
 GameObject:
   m_ObjectHideFlags: 0

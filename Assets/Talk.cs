@@ -14,7 +14,7 @@ public class Talk : MonoBehaviour
     public float time;
     private Coroutine curCo;
     public GameObject key;
-    public bool canTalk, haveInstruct;
+    public bool canTalk, haveInstruct, skipTalk;
     void Start()
     {
         textContainer.SetActive(false);
@@ -37,18 +37,28 @@ public class Talk : MonoBehaviour
                 }
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            skipTalk = true;
+        }
+        if (talkDia.text == talkContent && Input.GetKeyDown(KeyCode.Escape))
+        {
+            textContainer.GetComponent<Animator>().SetTrigger("close");
+        }
     }
     public IEnumerator displayText()
     {
         textContainer.SetActive (true);
-        bool skipTalk = false;
+        skipTalk = false;
         name.text = nameChar;
         talkDia.text = "";
+        
         for (int i = 0; i < talkContent.Length; i++)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (skipTalk)
             {
-                skipTalk = true;
+                talkDia.text = talkContent;
+                skipTalk = false;
                 break;
             }
             talkDia.text += talkContent[i];
@@ -56,14 +66,13 @@ public class Talk : MonoBehaviour
         }
         if(haveInstruct)
         {
+            textContainer.GetComponent<Animator>().SetTrigger("close");
             yield return new WaitForSeconds(3f);
             instruct.SetActive(true);
         }
-        if(skipTalk)
-        {
-            talkDia.text = talkContent;
-            skipTalk = false;
-        }
+        
+            
+        
         curCo = null;
     }
     public void OnTriggerEnter2D(Collider2D collision)
@@ -72,6 +81,7 @@ public class Talk : MonoBehaviour
         {
             key.SetActive (true);
             canTalk = true;
+            
             
         }
     }
@@ -82,8 +92,9 @@ public class Talk : MonoBehaviour
             //StopCoroutine(displayText());
             key.SetActive(false);
             canTalk = false;
-            textContainer.SetActive(false);
+            textContainer.GetComponent<Animator>().SetTrigger("close");
             curCo = null;
         }
     }
+    
 }

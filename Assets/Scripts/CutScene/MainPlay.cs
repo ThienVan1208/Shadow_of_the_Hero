@@ -43,11 +43,11 @@ public class MainPlay : MonoBehaviour
     IEnumerator Intro1(float time)
     {
         anim.SetBool("idle", false);
-        Debug.Log("trc");
+        
         anim.SetBool("run", true);
         yield return new WaitForSeconds(time);
         anim.SetBool("run", false);
-        Debug.Log("sau");
+        
         anim.SetBool("idle", true);
         yield return new WaitForSeconds (time + 1f);
         anim.SetTrigger("jump");
@@ -94,8 +94,8 @@ public class MainPlay : MonoBehaviour
     }
     IEnumerator Intro4()
     {
-        anim.SetBool("idle", false);
-        anim.SetBool("run", true);
+        //anim.SetBool("idle", false);
+        //anim.SetBool("run", true);
         yield return new WaitForSeconds(2f);
 
         anim.SetBool("run", false);
