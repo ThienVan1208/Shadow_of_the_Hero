@@ -47,7 +47,7 @@ public class DialogManager : MonoBehaviour
         for (int i = 0; i < text.Length; i++)
         {
             dialogText.text += text[i];
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(0.06f);
         }
     }
     IEnumerator DisplayNextSentenceAfterDelay(float delay)

@@ -610,6 +610,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dd47f3981f1b0b469c0c958625a57ea, type: 3}
+--- !u!1 &496893988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 496893991}
+  - component: {fileID: 496893990}
+  - component: {fileID: 496893989}
+  m_Layer: 0
+  m_Name: nextScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &496893989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496893988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: e0c7fda9552b33d418ab7888b06053c4, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 496893990}
+          m_TargetAssemblyTypeName: nextScene, Assembly-CSharp
+          m_MethodName: ChangeToNextScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &496893990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496893988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a91c71252a69984c824c960001a9721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &496893991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496893988}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 121.591576, y: 289.68512, z: 3.5796275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543916287
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +967,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 51c7c87ad260ffc448571d32cfff0db4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.429
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9781,7 +9856,7 @@ PlayableDirector:
   - key: {fileID: 3328333401981219175, guid: 218ad6b6fbccd144a94f45e57995c50d, type: 2}
     value: {fileID: 1435984702}
   - key: {fileID: 7055674123997818399, guid: 218ad6b6fbccd144a94f45e57995c50d, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 496893989}
   - key: {fileID: 4110230739049048968, guid: 218ad6b6fbccd144a94f45e57995c50d, type: 2}
     value: {fileID: 705224501}
   - key: {fileID: 4119901979589932132, guid: 218ad6b6fbccd144a94f45e57995c50d, type: 2}
@@ -10378,7 +10453,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4f2eaca176974c542be4c0e14d8e8d77, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.23
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10502,12 +10577,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6961973417112418049, guid: 82a2575b67ff3ec4cbf92f668e477bc9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.85250986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961973417112418049, guid: 82a2575b67ff3ec4cbf92f668e477bc9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85250986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961973417112418049, guid: 82a2575b67ff3ec4cbf92f668e477bc9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.85250986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961973417112418049, guid: 82a2575b67ff3ec4cbf92f668e477bc9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.127246
+      value: -4.1331
       objectReference: {fileID: 0}
     - target: {fileID: 6961973417112418049, guid: 82a2575b67ff3ec4cbf92f668e477bc9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.45
+      value: -1.5016
       objectReference: {fileID: 0}
     - target: {fileID: 6961973417112418049, guid: 82a2575b67ff3ec4cbf92f668e477bc9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10714,7 +10801,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c12e8f5d5f5ca3841829fb1d69a04bb1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.679
+  m_Volume: 0.047
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -35473,13 +35560,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: The battle is long lasting but it finally ends and the demon king dargor
+      value: the battle is long lasting but it finally ends and the demon king dargor
         is defeated.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
       value: after a dreadfull war with demons, the hero decides to settle down in
-        a small peacefull village nestled among lush green forests of eldoria.
+        a small peacefull village nestled among lush green forests.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
@@ -35716,3 +35803,4 @@ SceneRoots:
   - {fileID: 1804997279}
   - {fileID: 301827069}
   - {fileID: 670949079}
+  - {fileID: 496893991}

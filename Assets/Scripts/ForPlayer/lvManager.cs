@@ -20,11 +20,11 @@ public class lvManager : MonoBehaviour
         if (levelInstance == null)
         {
             levelInstance = this;
-            DontDestroyOnLoad(levelInstance);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(levelInstance);
+            Destroy(gameObject);
         }
     }
     public void Start()
