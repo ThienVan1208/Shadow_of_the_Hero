@@ -738,6 +738,63 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &670949079
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3119224237202201161, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 121.591576
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 289.68512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.5796275
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277521118969821980, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d23bab527c10ac34a9e830e70576dddb, type: 3}
 --- !u!1 &697257841
 GameObject:
   m_ObjectHideFlags: 0
@@ -9724,7 +9781,7 @@ PlayableDirector:
   - key: {fileID: 3328333401981219175, guid: 218ad6b6fbccd144a94f45e57995c50d, type: 2}
     value: {fileID: 1435984702}
   - key: {fileID: 7055674123997818399, guid: 218ad6b6fbccd144a94f45e57995c50d, type: 2}
-    value: {fileID: 1773562742}
+    value: {fileID: 0}
   - key: {fileID: 4110230739049048968, guid: 218ad6b6fbccd144a94f45e57995c50d, type: 2}
     value: {fileID: 705224501}
   - key: {fileID: 4119901979589932132, guid: 218ad6b6fbccd144a94f45e57995c50d, type: 2}
@@ -10756,86 +10813,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 301827069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1773562739
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1773562741}
-  - component: {fileID: 1773562740}
-  - component: {fileID: 1773562742}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1773562740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773562739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1c87dea6947e2749a8c6260315f593e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Boss: 1
-  gm_hp: 5
-  gm_atk: 1
-  gm_mana: 5
-  gm_skill: 5
---- !u!4 &1773562741
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773562739}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3680821, y: 0.63413537, z: 2.664465}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1773562742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773562739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: e0c7fda9552b33d418ab7888b06053c4, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1773562740}
-          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-          m_MethodName: StartGame
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1804997277
 GameObject:
   m_ObjectHideFlags: 0
@@ -35486,29 +35463,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: In a fantasy land called Eldoria which was attacked by the demon king
-        Dargor.
+      value: in a magical world called eldoria, where magic and mystery filled every
+        corner. but it now is attacked by the demon king dargor.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: However, with the appearance of hero, he fought with Dargor to defend
-        Eldoria.
+      value: however, with the appearance of hero, he fights with dargor to defend
+        eldoria.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: The battle was long lasting but it finally ended and the demon king
-        Dargor was defeated.
+      value: The battle is long lasting but it finally ends and the demon king dargor
+        is defeated.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: After a dreadfull war, the hero decided to settle down in a small beautiful
-        village.
+      value: after a dreadfull war with demons, the hero decides to settle down in
+        a small peacefull village nestled among lush green forests of eldoria.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
       value: "H\u1EAFn tri\u1EC7u h\u1ED3i qu\xE1i v\u1EADt t\u1EEB b\xF3ng t\u1ED1i,
         bi\u1EBFn Eldoria th\xE0nh m\u1ED9t v\xF9ng \u0111\u1EA5t ch\u1EBFt ch\xF3c
         v\xE0 \u0111au kh\u1ED5."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206921774498502994, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 94.0109
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206921774498502994, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 47.005463
       objectReference: {fileID: 0}
     - target: {fileID: 6297922154329206578, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: m_Name
@@ -35517,6 +35502,18 @@ PrefabInstance:
     - target: {fileID: 6297922154329206578, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128261686419900309, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 997bfcd2bde7484468b6d74888b4358c, type: 3}
+    - target: {fileID: 7128261686419900309, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128261686419900309, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8130107151929468086, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: m_IsActive
@@ -35645,7 +35642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2703196728458164860, guid: 140ca17bf468b4e49a88db8b4f9f8580, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3222391083814805995, guid: 140ca17bf468b4e49a88db8b4f9f8580, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35710,7 +35707,6 @@ SceneRoots:
   - {fileID: 2905251752200242829}
   - {fileID: 305004178}
   - {fileID: 697257844}
-  - {fileID: 1773562741}
   - {fileID: 2005232364}
   - {fileID: 779665512}
   - {fileID: 1989498356}
@@ -35719,3 +35715,4 @@ SceneRoots:
   - {fileID: 8954590334044958629}
   - {fileID: 1804997279}
   - {fileID: 301827069}
+  - {fileID: 670949079}

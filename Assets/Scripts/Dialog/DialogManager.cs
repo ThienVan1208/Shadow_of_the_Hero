@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro; // If you use TextMeshPro
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,11 +36,20 @@ public class DialogManager : MonoBehaviour
         }
         string sentence = dialog.Dequeue();
        
-        dialogText.text = sentence;
+        //dialogText.text = sentence;
+        StartCoroutine(runText(sentence));
 
         StartCoroutine(DisplayNextSentenceAfterDelay(10f)); // Adjust the delay time as needed
     }
-
+    IEnumerator runText(string text)
+    {
+        dialogText.text = "";
+        for (int i = 0; i < text.Length; i++)
+        {
+            dialogText.text += text[i];
+            yield return new WaitForSeconds(0.03f);
+        }
+    }
     IEnumerator DisplayNextSentenceAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);

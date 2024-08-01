@@ -956,7 +956,7 @@ MonoBehaviour:
   init_right: 0
   atkRange: {x: 3, y: 3}
   followRange: {x: 5, y: 5}
-  health: 2
+  health: 1.5
   slid: {fileID: 2308008234481700733}
   DashRange: {x: 0, y: 0}
   atk: {fileID: 5662154255383652414}
