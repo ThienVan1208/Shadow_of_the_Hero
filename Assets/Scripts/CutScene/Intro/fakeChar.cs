@@ -45,6 +45,8 @@ public class fakeChar : MonoBehaviour, AttackInterface
 
     public bool initLeft, initRight;
 
+    public bool end;
+
     public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -273,12 +275,19 @@ public class fakeChar : MonoBehaviour, AttackInterface
         sliderOfHP(health);
         if (health <= 0)
         {
-            die = true;
+            if (!end)
+            {
+                die = true;
 
-            animator.SetTrigger("die");
-            //Audio.sound.StopBattle();
-            //Audio.sound.NormalSound();
-            GameManager.Instance.Boss = false;
+                animator.SetTrigger("die");
+                //Audio.sound.StopBattle();
+                //Audio.sound.NormalSound();
+                GameManager.Instance.Boss = false;
+            }
+            else if(end)
+            {
+                StartCoroutine(SceneTransit.transitScene.Transit());
+            }
 
         }
     }

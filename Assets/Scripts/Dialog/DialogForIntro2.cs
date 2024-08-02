@@ -10,12 +10,19 @@ public class DialogForIntro2 : MonoBehaviour
     [TextArea(3, 10)]
     public string[] talkContent;
     public string nameChar;
-    
+    public bool end;
     
     
     void Start()
     {
-        StartCoroutine(MainTalk());
+        if (!end)
+        {
+            StartCoroutine(MainTalk());
+        }
+        else
+        {
+            StartCoroutine (End());
+        }
     }
 
     // Update is called once per frame
@@ -57,4 +64,25 @@ public class DialogForIntro2 : MonoBehaviour
             yield return new WaitForSeconds(0.04f);
         }
     }
+    public IEnumerator End()
+    {
+        name.text = nameChar;
+        talkDia.text = "";
+        for (int i = 0; i < talkContent[0].Length; i++)
+        {
+            talkDia.text += talkContent[0][i];
+            yield return new WaitForSeconds(0.04f);
+        }
+
+        yield return new WaitForSeconds(2.5f);
+        talkDia.text = "";
+        for (int i = 0; i < talkContent[1].Length; i++)
+        {
+            talkDia.text += talkContent[1][i];
+            yield return new WaitForSeconds(0.04f);
+        }
+        yield return new WaitForSeconds(2f);
+        GetComponent<Animator>().SetTrigger("close");
+    }
+
 }

@@ -36,6 +36,10 @@ public class ItemManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void Reset()
+    {
+        Destroy(gameObject);
+    }
     public int numHP = 1, numMana = 1;
     public void CollectHP()
     {

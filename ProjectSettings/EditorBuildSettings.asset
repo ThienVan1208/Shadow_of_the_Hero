@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon2.unity
     guid: 9338d9d59e884f6459ffad1955908526
+  - enabled: 1
+    path: Assets/Scenes/ENDGAME.unity
+    guid: 0ceb94ea60e3db84dbfad93d28dd155a
   m_configObjects: {}

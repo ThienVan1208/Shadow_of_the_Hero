@@ -8,7 +8,7 @@ public class MainPlay : MonoBehaviour
     public Animator anim;
     private Coroutine curCo;
     public ParticleSystem sys;
-    public bool intro1, intro2, intro3, intro4;
+    public bool intro1, intro2, intro3, intro4, endGame;
     void Start()
     {
 
@@ -37,7 +37,11 @@ public class MainPlay : MonoBehaviour
             else if(intro4)
             {
                 curCo = StartCoroutine(Intro4());
-            }    
+            } 
+            else if(endGame)
+            {
+                curCo = StartCoroutine(EndGame());
+            }
         }
     }
     IEnumerator Intro1(float time)
@@ -100,5 +104,17 @@ public class MainPlay : MonoBehaviour
 
         anim.SetBool("run", false);
         anim.SetBool("idle", true);
+    }
+
+    IEnumerator EndGame()
+    {
+        anim.SetBool("run", false);
+        anim.SetBool("idle", true);
+        yield return new WaitForSeconds(10f);
+
+        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+        anim.SetBool("idle", false);
+        anim.SetBool("run", true);
+
     }
 }

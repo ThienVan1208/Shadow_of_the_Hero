@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     
     public static GameManager Instance;
     public bool Boss = true;
-    public int gm_hp = 5, gm_atk = 1, gm_mana = 5, gm_skill = 5;
+    public int gm_hp = 40, gm_atk = 2, gm_mana = 5, gm_skill = 5;
 
     
     private void Awake()
@@ -24,6 +24,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Reset()
+    {
+        gm_hp = 40; 
+        gm_atk = 2;
+        gm_mana = 5; 
+        gm_skill = 5;
+    }
     public void gameOver()
     {
         SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex));

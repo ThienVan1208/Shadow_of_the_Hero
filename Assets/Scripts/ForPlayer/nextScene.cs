@@ -22,5 +22,12 @@ public class nextScene : MonoBehaviour
     {
         StartCoroutine(SceneTransit.transitScene.Transit());
     }
+    public void End()
+    {
+        GameManager.Instance.Reset();
+        lvManager.levelInstance.Reset();
+        ItemManager.itemManager.Reset();
+        StartCoroutine (SceneTransit.transitScene.TransitIndex(0));
+    }
    
 }

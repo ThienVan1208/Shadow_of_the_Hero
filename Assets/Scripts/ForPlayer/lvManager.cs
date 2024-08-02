@@ -27,6 +27,10 @@ public class lvManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void Reset()
+    {
+        Destroy(gameObject);
+    }
     public void Start()
     {
         if(player == null)
