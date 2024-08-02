@@ -12,7 +12,7 @@ public class FakeCharIntro2 : MonoBehaviour
     public void Start()
     {
         
-        
+
     }
     public void OnEnable()
     {
