@@ -8,7 +8,7 @@ public class collect : MonoBehaviour
     public string nameItem;
     public bool canCollect = false;
     public GameObject key;
-
+    public GameObject collectAudio;
     public void Start()
     {
         key.SetActive(false);
@@ -37,6 +37,7 @@ public class collect : MonoBehaviour
     {
         if(canCollect && Input.GetKeyDown(KeyCode.E))
         {
+            Instantiate(collectAudio);
             CollectItem(nameItem);
             afterCollect(nameItem);
         }

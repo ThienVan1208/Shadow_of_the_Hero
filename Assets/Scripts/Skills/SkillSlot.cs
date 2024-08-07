@@ -13,6 +13,7 @@ public class SkillSlot : MonoBehaviour
     public string curSkill;
     public string[] name;
     public Image fade;
+    public AudioSource changeAudi;
     void Start()
     {
         display.gameObject.SetActive(false);
@@ -29,6 +30,8 @@ public class SkillSlot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
+            changeAudi.Play();
+            changeAudi.loop = false;
             StartCoroutine(Fade());
             display.gameObject.SetActive(true);
             index = (index + 1) % image.Length;

@@ -275,23 +275,26 @@ public class fakeChar : MonoBehaviour, AttackInterface
         sliderOfHP(health);
         if (health <= 0)
         {
+            animator.SetTrigger("die");
+            die = true;
             if (!end)
             {
-                die = true;
-
-                animator.SetTrigger("die");
-                //Audio.sound.StopBattle();
-                //Audio.sound.NormalSound();
+                
                 GameManager.Instance.Boss = false;
             }
             else if(end)
             {
-                StartCoroutine(SceneTransit.transitScene.Transit());
+                StartCoroutine(DieNext());
             }
 
         }
     }
 
+    IEnumerator DieNext()
+    {
+        yield return new WaitForSeconds(1.833f);
+        StartCoroutine(SceneTransit.transitScene.Transit());
+    }
 
     public void sliderOfHP(float hp)
     {

@@ -13,7 +13,7 @@ public class MainControl : MonoBehaviour
 
     public float speedRun = 10f;
 
-    public bool  is_death;
+    public bool is_death;
     
     public static float hp = 10f;
     public static float damage = 0.5f;
@@ -218,8 +218,10 @@ public class MainControl : MonoBehaviour
     }
     public void over()
     {
-        if(!introUse)
-        GameManager.Instance.gameOver();
+        if (!introUse)
+        {
+            GameManager.Instance.gameOver();
+        }
     }
 
     void OnEnable()

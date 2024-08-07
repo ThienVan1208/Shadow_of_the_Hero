@@ -231,8 +231,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameItem: Mana
-  collected: 0
+  canCollect: 0
   key: {fileID: 5025863153731067713}
+  collectAudio: {fileID: 2025519435306271433, guid: 06646a9d3d22af0459ac3071108bba0d, type: 3}
 --- !u!50 &5352197433945484236
 Rigidbody2D:
   serializedVersion: 4

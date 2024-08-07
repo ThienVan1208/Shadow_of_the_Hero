@@ -147,8 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameItem: HP
-  collected: 0
+  canCollect: 0
   key: {fileID: 1673669501785999525}
+  collectAudio: {fileID: 2025519435306271433, guid: 06646a9d3d22af0459ac3071108bba0d, type: 3}
 --- !u!50 &463609761138326996
 Rigidbody2D:
   serializedVersion: 4

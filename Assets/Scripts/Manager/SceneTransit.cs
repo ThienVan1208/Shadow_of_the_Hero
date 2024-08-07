@@ -78,4 +78,5 @@ public class SceneTransit : MonoBehaviour
     {
         StartCoroutine(Transit());
     }
+   
 }

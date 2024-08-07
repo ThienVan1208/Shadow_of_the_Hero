@@ -37,11 +37,11 @@ public class Talk : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             skipTalk = true;
         }
-        if (talkDia.text == talkContent[1] && Input.GetKeyDown(KeyCode.Escape))
+        if (talkDia.text == talkContent[talkContent.Length - 1] && Input.GetKeyDown(KeyCode.Escape))
         {
             textContainer.GetComponent<Animator>().SetTrigger("close");
         }
@@ -66,15 +66,18 @@ public class Talk : MonoBehaviour
                 yield return new WaitForSeconds(time);
             }
             yield return new WaitForSeconds(2f);
-            if(index == 0)
+            if (talkContent.Length != 1)
+            {
                 talkDia.text = "";
-
+            }
         }
-        if(haveInstruct)
+
+        yield return new WaitForSeconds(1f);
+        textContainer.GetComponent<Animator>().SetTrigger("close");
+        yield return new WaitForSeconds(1f);
+        if (haveInstruct)
         {
-            yield return new WaitForSeconds(2f);
-            textContainer.GetComponent<Animator>().SetTrigger("close");
-            yield return new WaitForSeconds(3f);
+           
             instruct.SetActive(true);
         }
         

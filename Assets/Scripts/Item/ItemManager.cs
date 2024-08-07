@@ -31,6 +31,7 @@ public class ItemManager : MonoBehaviour
     public void Update()
     {
         CheckNum();
+        
     }
     public void Awake()
     {
@@ -46,6 +47,7 @@ public class ItemManager : MonoBehaviour
     }
     public void Reset()
     {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         Destroy(gameObject);
     }
     public int numHP = 1, numMana = 1;
@@ -71,11 +73,17 @@ public class ItemManager : MonoBehaviour
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         if(sceneIndex == 6 || sceneIndex == 13 || sceneIndex == 15)
         {
-            canvasGr.alpha = 0;
+            if (itemManager != null)
+            {
+                canvasGr.alpha = 0;
+            }
         }
     }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        canvasGr.alpha = 1f;
+        if (itemManager != null)
+        {
+            canvasGr.alpha = 1f;
+        }
     }
 }

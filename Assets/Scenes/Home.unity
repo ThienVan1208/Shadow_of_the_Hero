@@ -5916,6 +5916,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 364530981424255344, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 364530981424255344, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
       propertyPath: m_fontColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -5964,6 +5968,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1414926987933649169, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414926987933649169, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
       propertyPath: m_fontColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -6001,6 +6009,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2762430967610250091, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765115554754830138, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
+      propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2765115554754830138, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
@@ -6053,9 +6065,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3892499427665829159, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
       propertyPath: talkContent
-      value: oh you finally wake up. i sorry for your village, someone look like
-        you destroyed the village and i do not exactly what it is. I have something
-        want to give as a journey gift. let's go outside to try.
+      value: "ah, you finally wake up. i\u2019m sorry about your village. there is
+        a rumor going around that someone who looks exactly like you destroyed the
+        village, but I don\u2019t quite buy it, though I don\u2019t know exactly
+        what it was. \r\ni have something i want to give you as a gift for your journey
+        ahead. let's go outside and try it out.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 3892499427665829159, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
       propertyPath: haveInstruct
@@ -6065,6 +6079,22 @@ PrefabInstance:
       propertyPath: textContainer
       value: 
       objectReference: {fileID: 779703000}
+    - target: {fileID: 3892499427665829159, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
+      propertyPath: talkContent.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892499427665829159, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
+      propertyPath: talkContent.Array.data[0]
+      value: "ah, you finally wake up. i\u2019m sorry about your village. there is
+        a rumor going around that someone who looks exactly like you destroyed the
+        village, but i don\u2019t quite buy it, though i don\u2019t know exactly
+        what it was. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892499427665829159, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
+      propertyPath: talkContent.Array.data[1]
+      value: i have something i want to give you as a gift for your journey ahead.
+        let's go outside and try it out.
+      objectReference: {fileID: 0}
     - target: {fileID: 3900687738964735847, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
       propertyPath: m_Name
       value: Wizzard
@@ -6128,6 +6158,10 @@ PrefabInstance:
     - target: {fileID: 5340701116226385356, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456009564781997041, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5456009564781997041, guid: 38d27c3e1ebf7ac4ebd43dc657a3f29d, type: 3}
       propertyPath: m_fontColor.b
@@ -6591,63 +6625,134 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &370245038
-PrefabInstance:
+--- !u!1 &353990855
+GameObject:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353990856}
+  - component: {fileID: 353990857}
+  m_Layer: 0
+  m_Name: openAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &353990856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353990855}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2820684935990195507, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_Name
-      value: Exp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 481.56845
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 199.10115
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalRotation.w
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 439321713}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &353990857
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353990855}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b7b39844d34022849a88276931d87edf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalRotation.x
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalRotation.y
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalRotation.z
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546843195802328264, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &439321711
 GameObject:
   m_ObjectHideFlags: 0
@@ -6734,6 +6839,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1771482574}
+  - {fileID: 353990856}
   m_Father: {fileID: 930123857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &439321714
@@ -6769,6 +6875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4565a3a7caeed8c4ebf7d15d2ed1b575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 439321714}
+  openAudi: {fileID: 353990857}
 --- !u!61 &439321716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12182,4 +12290,3 @@ SceneRoots:
   - {fileID: 86630359}
   - {fileID: 80380012}
   - {fileID: 2087853406}
-  - {fileID: 370245038}

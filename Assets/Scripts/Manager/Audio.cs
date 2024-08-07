@@ -26,6 +26,7 @@ public class Audio : MonoBehaviour
         }
     }
 
+    
     public void Start()
     {
         NormalSound();

@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     }
     public void gameOver()
     {
-        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex));
+        StartCoroutine(SceneTransit.transitScene.TransitIndex(SceneManager.GetActiveScene().buildIndex));
     }
 
     public void dungeon()
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         StartCoroutine(SceneTransit.transitScene.Transit());
+
     }
     public void inCave()
     {

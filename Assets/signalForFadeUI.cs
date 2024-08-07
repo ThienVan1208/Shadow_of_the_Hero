@@ -7,6 +7,7 @@ public class signalForFadeUI : MonoBehaviour
     // Start is called before the first frame update
     public void FunctionToActiveFadeUI()
     {
-        ItemManager.itemManager.FadeForCutScene();
+        if(ItemManager.itemManager != null)
+            ItemManager.itemManager.FadeForCutScene();
     }
 }

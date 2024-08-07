@@ -5,10 +5,11 @@ using UnityEngine;
 public class Gate : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Animator anim;
+    public Animator anim;
+    public AudioSource openAudi;
     void Start()
     {
-        anim = GetComponent<Animator>();   
+         
     }
 
     // Update is called once per frame
@@ -21,8 +22,11 @@ public class Gate : MonoBehaviour
             {
                 Debug.Log("open");
                 anim.SetTrigger("open");
+                openAudi.Play();
+                openAudi.loop = false;
                 StartCoroutine(SceneTransit.transitScene.Transit());
             }
         }
     }
+
 }

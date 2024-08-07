@@ -12,6 +12,7 @@ public class ItemSlot : MonoBehaviour
     public string curItem;
     public string[] name;
     public Image fade;
+    public AudioSource itemAudi;
     void Start()
     {
         display.gameObject.SetActive(false);
@@ -28,6 +29,8 @@ public class ItemSlot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
+            itemAudi.Play();
+            itemAudi.loop = false;
             StartCoroutine(Fade());
             display.gameObject.SetActive(true);
             index = (index + 1) % image.Length;
