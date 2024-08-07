@@ -9,7 +9,7 @@ public class Talk : MonoBehaviour
     public GameObject textContainer, instruct;
     public TextMeshProUGUI name, talkDia;
     [TextArea(3,10)]
-    public string talkContent;
+    public string[] talkContent;
     public string nameChar;
     public float time;
     private Coroutine curCo;
@@ -41,7 +41,7 @@ public class Talk : MonoBehaviour
         {
             skipTalk = true;
         }
-        if (talkDia.text == talkContent && Input.GetKeyDown(KeyCode.Escape))
+        if (talkDia.text == talkContent[1] && Input.GetKeyDown(KeyCode.Escape))
         {
             textContainer.GetComponent<Animator>().SetTrigger("close");
         }
@@ -52,17 +52,23 @@ public class Talk : MonoBehaviour
         skipTalk = false;
         name.text = nameChar;
         talkDia.text = "";
-        
-        for (int i = 0; i < talkContent.Length; i++)
+        for (int index = 0; index < talkContent.Length; index++)
         {
-            if (skipTalk)
+            for (int i = 0; i < talkContent[index].Length; i++)
             {
-                talkDia.text = talkContent;
-                skipTalk = false;
-                break;
+                if (skipTalk)
+                {
+                    talkDia.text = talkContent[index];
+                    skipTalk = false;
+                    break;
+                }
+                talkDia.text += talkContent[index][i];
+                yield return new WaitForSeconds(time);
             }
-            talkDia.text += talkContent[i];
-            yield return new WaitForSeconds(time);
+            yield return new WaitForSeconds(2f);
+            if(index == 0)
+                talkDia.text = "";
+
         }
         if(haveInstruct)
         {

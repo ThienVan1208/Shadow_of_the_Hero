@@ -10,6 +10,7 @@ public class Audio : MonoBehaviour
     
     public AudioSource battleSound;
     public AudioSource normalSound;
+    public bool end;
     
 
     public void Awake()
@@ -31,20 +32,19 @@ public class Audio : MonoBehaviour
     }
     public void Update()
     {
-        //if(GameManager.Instance.Minotaur)
-        //{
-        //    BattleSound();
-        //    StopNormal();
-        //}
-        //else if(!GameManager.Instance.Minotaur)
-        //{
-        //    NormalSound();
-        //    StopBattle();
-        //}
+        if(end)
+        {
+            audioForEnd();
+        }
+    }
+    public void Reset()
+    {
+        Destroy(gameObject);
     }
     public void BattleSound()
     {
         battleSound.Play();
+        battleSound.volume = 0.5f;
         battleSound.loop = true;
     }
     public void StopBattle()
@@ -61,6 +61,10 @@ public class Audio : MonoBehaviour
     {
         normalSound.loop = false;
         normalSound.Stop();
+    }
+    public void audioForEnd()
+    {
+        battleSound.volume -= 0.01f;
     }
     
 }

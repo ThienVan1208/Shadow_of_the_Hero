@@ -39,6 +39,7 @@ public class MainControl : MonoBehaviour
     public bool ATKForUI = false;
 
     public UIIventoryPage increaseInfo;
+    
  
     void Start()
     {

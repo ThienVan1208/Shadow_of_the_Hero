@@ -53,6 +53,7 @@ public class MainPlay : MonoBehaviour
         anim.SetBool("run", false);
         
         anim.SetBool("idle", true);
+        GetComponent<AudioSkel>().stopWalk();
         yield return new WaitForSeconds (time + 1f);
         anim.SetTrigger("jump");
         yield return new WaitForSeconds(9f);
@@ -73,6 +74,7 @@ public class MainPlay : MonoBehaviour
 
         anim.SetBool ("run", false);
         anim.SetBool("idle", true) ;
+        GetComponent<AudioSkel>().stopWalk();
         yield return new WaitForSeconds(0.683f);
 
         anim.SetBool("idle", false);
@@ -81,6 +83,7 @@ public class MainPlay : MonoBehaviour
 
         anim.SetBool("run", false);
         anim.SetBool("idle", true);
+        GetComponent<AudioSkel>().stopWalk();
         yield return new WaitForSeconds(0.96f);
 
         anim.SetBool("idle", false);
@@ -89,6 +92,7 @@ public class MainPlay : MonoBehaviour
 
         anim.SetBool("run", false);
         anim.SetBool("idle", true);
+        GetComponent<AudioSkel>().stopWalk();
     }
     IEnumerator Intro3()
     {
@@ -101,7 +105,7 @@ public class MainPlay : MonoBehaviour
         //anim.SetBool("idle", false);
         //anim.SetBool("run", true);
         yield return new WaitForSeconds(2f);
-
+        GetComponent<AudioSkel>().stopWalk();
         anim.SetBool("run", false);
         anim.SetBool("idle", true);
     }

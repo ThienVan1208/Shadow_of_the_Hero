@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class hitEffect : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Material mat;
-    private Color hitColor = Color.white;
+    
+    
     public float hitTime = 0.25f;
     public GameObject slashHit;
+    public SpriteRenderer spRen;
     void Start()
     {
-        mat.SetFloat("_FlashAmount", 0);
+        spRen = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -35,9 +38,10 @@ public class hitEffect : MonoBehaviour
     }
     public IEnumerator StopEffect(float hitTime)
     {
-        mat.SetFloat("_FlashAmount", 1);
+        Color color = new Color(1.0f, 0.5f, 0.5f, 1.0f);
+        spRen.color = color;
         yield return new WaitForSeconds(hitTime);
-        mat.SetFloat("_FlashAmount", 0);
+        spRen.color = Color.white;
     }
     public void SlashHit()
     {

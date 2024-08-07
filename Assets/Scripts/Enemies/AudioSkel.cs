@@ -30,4 +30,8 @@ public class AudioSkel : MonoBehaviour
         walk.Play();
         walk.loop = false;
     }
+    public void stopWalk()
+    {
+        walk.Stop();
+    }
 }

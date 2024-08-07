@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 4334946643889088690}
   - component: {fileID: 2051328391298578753}
   - component: {fileID: 2548348244122710309}
+  - component: {fileID: 4413100667868604071}
   m_Layer: 0
   m_Name: ItemManager
   m_TagString: Untagged
@@ -399,6 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: {fileID: 3482589451931601580}
   slot: {fileID: 2548348244122710309}
+  canvasGr: {fileID: 4413100667868604071}
   numHP: 1
   numMana: 1
 --- !u!114 &2051328391298578753
@@ -443,6 +445,18 @@ MonoBehaviour:
   - HP
   - Mana
   fade: {fileID: 5520906370167468402}
+--- !u!225 &4413100667868604071
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720859133468381828}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4873738524448145118
 GameObject:
   m_ObjectHideFlags: 0

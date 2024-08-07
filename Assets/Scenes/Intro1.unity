@@ -35550,23 +35550,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: in a magical world called eldoria, where magic and mystery filled every
-        corner. but it now is attacked by the demon king dargor.
+      value: the magical world of eldoria, where magic and mystical mysteries fill
+        every corner, is now attacked by the demon king dargor.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: however, with the appearance of hero, he fights with dargor to defend
-        eldoria.
+      value: when the people of eldoria think that all has been lost, a hero appears
+        and fights dargor to defend eldoria.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: the battle is long lasting but it finally ends and the demon king dargor
-        is defeated.
+      value: the battle is fierce and long lasting. it finally ends with the ultimate
+        defeat of the demon king dargor.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
       value: after a dreadfull war with demons, the hero decides to settle down in
-        a small peacefull village nestled among lush green forests.
+        a small peaceful village nestled among lush green forests.
       objectReference: {fileID: 0}
     - target: {fileID: 2163933692686728417, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
@@ -35575,8 +35575,24 @@ PrefabInstance:
         v\xE0 \u0111au kh\u1ED5."
       objectReference: {fileID: 0}
     - target: {fileID: 5206921774498502994, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206921774498502994, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206921774498502994, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 711.0097
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206921774498502994, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: m_SizeDelta.y
       value: 94.0109
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206921774498502994, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5206921774498502994, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -35601,6 +35617,10 @@ PrefabInstance:
     - target: {fileID: 7128261686419900309, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128261686419900309, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8130107151929468086, guid: c76bc8aaed99fa643b0338a56f1ea8a0, type: 3}
       propertyPath: m_IsActive
