@@ -30,7 +30,7 @@ public class totem : MonoBehaviour
     public Vector2 atkRange;
 
 
-    public virtual void Start()
+    public void Start()
     {
         GameManager.Instance.Boss = true;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -48,7 +48,7 @@ public class totem : MonoBehaviour
 
 
     }
-
+    
 
     // Update is called once per frame
     void Update()
@@ -165,7 +165,7 @@ public class totem : MonoBehaviour
     public void Die()
     {
         BossDae.countTotem++;
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
 }

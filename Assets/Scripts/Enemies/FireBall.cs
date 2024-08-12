@@ -9,6 +9,7 @@ public class FireBall : MonoBehaviour
     public static float damage = 0.01f;
     public AudioSource shot;
     public AudioSource hit;
+    public holdFireBall holder;
     void Update()
     {
         transform.Translate(Vector3.right * speed * Time.deltaTime);
@@ -24,7 +25,9 @@ public class FireBall : MonoBehaviour
 
     public void destroy()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        if(holder != null)
+            holder.count++;
     }
     public void Shot()
     {
@@ -35,5 +38,10 @@ public class FireBall : MonoBehaviour
     {
         hit.Play();
         hit.loop = false;
+    }
+    public void destroyForFireEnemy()
+    {
+
+        Destroy(gameObject); 
     }
 }

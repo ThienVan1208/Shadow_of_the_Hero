@@ -14,16 +14,15 @@ public class BossDae : MonoBehaviour
     public float speed = 3f;
     public Animator animator;
     public Rigidbody2D rb;
-    public bool isFollowing = false;
+    
     public Coroutine currentRoutine, countRoutine;
 
     // to detect direction of attacking
     protected bool left = true, right = false;
     protected bool die = false;
 
-    public float attackX;
-    public float attackY;
-    public float followX, followY;
+    
+    
 
     private bool isATK = false;
     private orderOfSkills skill;
@@ -37,34 +36,28 @@ public class BossDae : MonoBehaviour
     // HEALTH
     public float health;
 
-    public static int countTotem = 8;/// <summary>
-                                     /// ////////////////////////////////////////////////////////////////
-                                     /// </summary>
-    public GameObject fireBall;
+    public static int countTotem = 0;
+    public GameObject[] fireHolder;
     public GameObject totem;
 
     //public float time = 0;
 
     public Slider slid;
-    // Start is called before the first frame update
-
-    //public AudioMino mino;
+    
     public bool summon = false;
 
     public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        animator = GetComponent<Animator>();
+        
 
         getScale = transform.localScale;
-        countTotem = 8;
+        countTotem = 0;
 
-        rb = GetComponent<Rigidbody2D>();
+        
 
-        attackX = 2f;
-        attackY = 2f;
-        followX = 5f;
-        followY = 5f;
+        
+        
 
         atkObj = new GameObject[numATK];
         for (int i = 0; i < numATK; i++)
@@ -74,7 +67,7 @@ public class BossDae : MonoBehaviour
 
         slid.maxValue = health;
         slid.value = health;
-        isFollowing = true;
+      
         
 
     }
@@ -92,14 +85,16 @@ public class BossDae : MonoBehaviour
             {
                 if(summon)
                 {
-                    if (countTotem == 8)
-                    {
-                        currentRoutine = StartCoroutine(Summon());
-                        countTotem = 0;
-                    }
+                    currentRoutine = StartCoroutine(Summon());
+                    
                 }
                 else currentRoutine = StartCoroutine(ManageAttack());
 
+            }
+            if (countTotem == 8)
+            {
+                countTotem = 0;
+                
             }
         }
     }
@@ -153,7 +148,7 @@ public class BossDae : MonoBehaviour
     {
        
         animator.SetFloat("Speed", 1);
-        Vector2 follow = player.transform.position - transform.position; 
+        Vector2 follow = (player.transform.position - transform.position).normalized; 
         rb.velocity = new Vector2(follow.x * speed * Time.deltaTime, follow.y * speed * Time.deltaTime) * 100;
         if (follow.x > 0)
         {
@@ -173,8 +168,6 @@ public class BossDae : MonoBehaviour
 
         animator.SetBool("ATKContinuously", true);
         yield return Attack();
-        //yield return new WaitForSeconds(2f);
-
 
         animator.SetFloat("Speed", 1);
         animator.SetBool("ATKContinuously", false);
@@ -182,62 +175,45 @@ public class BossDae : MonoBehaviour
         isATK = false;
     }
 
-    public void shotFireBall()
+    public void shotFireBall(int index)
     {
-        Instantiate(fireBall, transform.position, Quaternion.Euler(0,0,0));
-        Instantiate(fireBall, transform.position, Quaternion.Euler(0, 0, 45));
-        Instantiate(fireBall, transform.position, Quaternion.Euler(0, 0, 90));
-        Instantiate(fireBall, transform.position, Quaternion.Euler(0, 0, 135));
-        Instantiate(fireBall, transform.position, Quaternion.Euler(0, 0, 180));
-        Instantiate(fireBall, transform.position, Quaternion.Euler(0, 0, 225));
-        Instantiate(fireBall, transform.position, Quaternion.Euler(0, 0, 270));
-        Instantiate(fireBall, transform.position, Quaternion.Euler(0, 0, 315));
+        
+        fireHolder[index].GetComponent<holdFireBall>().resetFireBall();
+        fireHolder[index].transform.position = transform.position;
+        fireHolder[index].SetActive(true);
     }
 
     public IEnumerator Attack()
     {
 
-        float time = 0;
+        
         Debug.Log("atk");
         isATK = true;
         animator.SetFloat("Speed", 0);
 
-        Vector2 attack = player.transform.position - transform.position;
+        Vector2 attack = (player.transform.position - transform.position).normalized;
        
-        shotFireBall();
+        shotFireBall(0);
 
-        rb.velocity += (attack * 1.5f);
-
-        yield return new WaitForSeconds(0.5f);
-        shotFireBall();
+        rb.velocity += (attack * 1.5f * speed);
 
         yield return new WaitForSeconds(0.5f);
-        shotFireBall();
+        shotFireBall(1);
 
         yield return new WaitForSeconds(0.5f);
-        shotFireBall();
+        shotFireBall(2);
 
         yield return new WaitForSeconds(0.5f);
-        shotFireBall();
+        shotFireBall(3);
 
-
-        
-        //yield return new WaitForSeconds(time);
-        yield return null;
+        yield return new WaitForSeconds(0.5f);
+        shotFireBall(4);
 
     }
     public IEnumerator Summon()
     {
         animator.SetTrigger("ATKOp");
-        Instantiate(totem, new Vector3(78, 15, 0), Quaternion.identity);
-        Instantiate(totem, new Vector3(45, 24, 0), Quaternion.identity);
-        Instantiate(totem, new Vector3(65, 31, 0), Quaternion.identity);
-        Instantiate(totem, new Vector3(87, 32, 0), Quaternion.identity);
-        Instantiate(totem, new Vector3(92, 20, 0), Quaternion.identity);
-        Instantiate(totem, new Vector3(104, 28, 0), Quaternion.identity);
-        Instantiate(totem, new Vector3(103, 12, 0), Quaternion.identity);
-        Instantiate(totem, new Vector3(125, 31, 0), Quaternion.identity);
-        Instantiate(totem, new Vector3(128, 17, 0), Quaternion.identity);
+        Instantiate(totem, new Vector3(89.6f, 21.2f, -0.03076696f), Quaternion.identity);
         yield return new WaitForSeconds(4.1f);
         currentRoutine = null;
     }
@@ -245,10 +221,7 @@ public class BossDae : MonoBehaviour
     // OnTriggerEnter2D                              
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            isFollowing = true;
-        }
+        
         
         if (collision.gameObject.CompareTag("AttackRange"))
         {
