@@ -237,10 +237,6 @@ MonoBehaviour:
   hpInfo: {fileID: 3385294203350099841}
   manaInfo: {fileID: 7477032284950316121}
   skillInfo: {fileID: 1916449208369111817}
-  initATK: 1
-  initHP: 5
-  initMana: 5
-  initSkill: 5
   initLevel: 0
   check: 0
 --- !u!1 &804658807489555643
@@ -1442,6 +1438,7 @@ GameObject:
   - component: {fileID: 2547128518203724095}
   - component: {fileID: 2418880557836332869}
   - component: {fileID: 6812099956298688664}
+  - component: {fileID: 2278889151571959377}
   m_Layer: 0
   m_Name: MainChar
   m_TagString: Player
@@ -1631,9 +1628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d57a7a8cfd27f47b4e2a9194486496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigid: {fileID: 66246505726931362}
+  animator: {fileID: 970220285228182408}
   speedRun: 8
-  is_death: 0
-  slidHP: {fileID: 2768201335025333242}
   dieOnce: 0
   getScale: {x: 0, y: 0}
   dashSpeed: 5
@@ -1642,6 +1639,7 @@ MonoBehaviour:
   introUse: 0
   ATKForUI: 0
   increaseInfo: {fileID: 125873850838092562}
+  healthEffect: {fileID: 2278889151571959377}
 --- !u!114 &78225674913264106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,7 +1705,6 @@ MonoBehaviour:
   mana_spend: 1
   manaSlid: {fileID: 3032413285430611055}
   animator: {fileID: 970220285228182408}
-  invent: {fileID: 125873850838092562}
 --- !u!114 &5556453400385599498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,6 +1721,7 @@ MonoBehaviour:
   volumnOfMana: 10
   HPHealEffect: {fileID: 8822297432334661706}
   ManaHealEffect: {fileID: 5434644598649229163}
+  healthEffect: {fileID: 2278889151571959377}
 --- !u!114 &2547128518203724095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1766,6 +1764,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainControl: {fileID: 7007952655922023113}
   inventoryPage: {fileID: 125873850838092562}
+--- !u!114 &2278889151571959377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3727077307529580292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e34db376175ee4ab22d5ce84449acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  die: 0
+  slidHP: {fileID: 2768201335025333242}
 --- !u!1 &3836552489730661461
 GameObject:
   m_ObjectHideFlags: 0

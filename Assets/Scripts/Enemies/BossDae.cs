@@ -21,9 +21,6 @@ public class BossDae : MonoBehaviour
     protected bool left = true, right = false;
     protected bool die = false;
 
-    
-    
-
     private bool isATK = false;
     private orderOfSkills skill;
 
@@ -40,8 +37,6 @@ public class BossDae : MonoBehaviour
     public GameObject[] fireHolder;
     public GameObject totem;
 
-    //public float time = 0;
-
     public Slider slid;
     
     public bool summon = false;
@@ -49,16 +44,9 @@ public class BossDae : MonoBehaviour
     public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        
 
         getScale = transform.localScale;
         countTotem = 0;
-
-        
-
-        
-        
-
         atkObj = new GameObject[numATK];
         for (int i = 0; i < numATK; i++)
         {
@@ -74,6 +62,7 @@ public class BossDae : MonoBehaviour
 
     public void Update()
     {
+        
         if (!die)
         {
             Direction();
@@ -185,9 +174,6 @@ public class BossDae : MonoBehaviour
 
     public IEnumerator Attack()
     {
-
-        
-        Debug.Log("atk");
         isATK = true;
         animator.SetFloat("Speed", 0);
 
@@ -195,7 +181,7 @@ public class BossDae : MonoBehaviour
        
         shotFireBall(0);
 
-        rb.velocity += (attack * 1.5f * speed);
+        rb.velocity += (attack * 40f * speed);
 
         yield return new WaitForSeconds(0.5f);
         shotFireBall(1);
@@ -212,10 +198,24 @@ public class BossDae : MonoBehaviour
     }
     public IEnumerator Summon()
     {
-        animator.SetTrigger("ATKOp");
-        Instantiate(totem, new Vector3(89.6f, 21.2f, -0.03076696f), Quaternion.identity);
-        yield return new WaitForSeconds(4.1f);
-        currentRoutine = null;
+        if (!totem.activeSelf)
+        {
+            animator.SetTrigger("ATKOp");
+            totem.SetActive(true);
+            yield return new WaitForSeconds(4.1f);
+            currentRoutine = null;
+            summon = false;
+        }
+        else
+        {
+
+            totem.GetComponent<totemHolder>().Explosion();
+            animator.SetTrigger("ATKOp");
+            yield return new WaitForSeconds(4.1f);
+            currentRoutine = null;
+            totem.SetActive(false);
+            summon = false;
+        }
     }
     
     // OnTriggerEnter2D                              

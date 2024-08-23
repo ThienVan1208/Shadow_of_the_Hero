@@ -20,6 +20,7 @@ public class FireBall : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Wall"))
         {
             GetComponent<Animator>().SetTrigger("hit");
+            speed = 2f;
         }
     }
 
@@ -44,4 +45,9 @@ public class FireBall : MonoBehaviour
 
         Destroy(gameObject); 
     }
+    private void OnEnable()
+    {
+        speed = 9f;
+    }
+
 }

@@ -14,7 +14,7 @@ public class UIIventoryPage : MonoBehaviour
     List<UIIventoryItem> ListOfItem = new List<UIIventoryItem>();
 
     public TextMeshProUGUI atkInfo, hpInfo, manaInfo, skillInfo;
-    public int initATK, initHP, initMana, initSkill;
+    ///public int initATK, initHP, initMana, initSkill;
     public int initLevel;
 
     public bool check;
@@ -24,10 +24,6 @@ public class UIIventoryPage : MonoBehaviour
         initLevel = lvManager.levelInstance.levelIndex;
         checkLvUp();
         updateStrength();
-        initATK = GameManager.Instance.gm_atk;
-        initHP = GameManager.Instance.gm_hp;
-        initMana = GameManager.Instance.gm_mana;
-        initSkill = GameManager.Instance.gm_skill;
     }
 
     public void InitializeItem(int numItem)
@@ -78,11 +74,6 @@ public class UIIventoryPage : MonoBehaviour
             GameManager.Instance.gm_hp++;
             GameManager.Instance.gm_skill++;
             GameManager.Instance.gm_mana++;
-
-            initATK = GameManager.Instance.gm_atk;
-            initHP = GameManager.Instance.gm_hp;
-            initMana = GameManager.Instance.gm_mana;
-            initSkill = GameManager.Instance.gm_skill;
 
             check = true;
         }

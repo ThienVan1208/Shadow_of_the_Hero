@@ -17,12 +17,12 @@ public class Ghoul : MonoBehaviour, AttackInterface
 
     // to detect direction of attacking
     protected bool left = false, right = true;
-    protected bool die = false;
+    
     public bool init_left, init_right;
     public Vector2 atkRange, followRange;
+    public HealthEffect healthEffect;
     // HEALTH
-    public float health;
-    public Slider slid;
+    
     private bool canDash = false, inGame = true;
     // Start is called before the first frame update
 
@@ -42,8 +42,7 @@ public class Ghoul : MonoBehaviour, AttackInterface
 
         rb = GetComponent<Rigidbody2D>();
 
-        slid.maxValue = health;
-        slid.value = health;
+        healthEffect.InitSlidHP();
         isFollowing = false;
         Direction();
 
@@ -67,7 +66,7 @@ public class Ghoul : MonoBehaviour, AttackInterface
 
 
 
-        if (!die)
+        if (!healthEffect.die)
         {
             Vector2 follow = (player.transform.position - transform.position);
             if (Mathf.Abs(follow.x) <= followRange.x && Mathf.Abs(follow.y) <= followRange.y)
@@ -216,29 +215,16 @@ public class Ghoul : MonoBehaviour, AttackInterface
 
     public void takeDAM(float take_dam)
     {
-        if (die) return;
+        if (healthEffect.die) return;
         GetComponent<AudioSkel>().Hit();
-        health -= take_dam;
-        sliderOfHP(health);
-        if (health <= 0)
+        healthEffect.takeDMG(take_dam);
+        if (healthEffect.hp <= 0)
         {
-            die = true;
+            healthEffect.die = true;
             GetComponent<AudioSkel>().Die();
             animator.SetTrigger("die");
-
-
-
         }
     }
-
-
-    public void sliderOfHP(float hp)
-    {
-        slid.value = hp;
-    }
-
-
-    ///////////////////////////
 
     public void Dash()
     {

@@ -13,7 +13,7 @@ public class hitEffect : MonoBehaviour
     public SpriteRenderer spRen;
     void Start()
     {
-        spRen = GetComponent<SpriteRenderer>();
+        
         
     }
 

@@ -985,13 +985,14 @@ GameObject:
   - component: {fileID: 1699340905226058419}
   - component: {fileID: 5411391830233957102}
   - component: {fileID: 6345364025542534374}
-  - component: {fileID: 1994708933404982575}
   - component: {fileID: 6820624083957904159}
   - component: {fileID: 7334753533225169905}
   - component: {fileID: 3797986076780283717}
   - component: {fileID: 7945163163939405816}
   - component: {fileID: 1498962766414489291}
   - component: {fileID: 6265209249631100793}
+  - component: {fileID: 504337691063761879}
+  - component: {fileID: 6591482803361281871}
   m_Layer: 0
   m_Name: AxeRat
   m_TagString: Untagged
@@ -1091,31 +1092,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1994708933404982575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9011362908554364920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7dc53503dea3a9428ed03d4a9f9e08c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 3
-  animator: {fileID: 6345364025542534374}
-  rb: {fileID: 7334753533225169905}
-  isFollowing: 0
-  init_left: 0
-  init_right: 0
-  atkRange: {x: 3, y: 3}
-  followRange: {x: 5, y: 5}
-  health: 3
-  slid: {fileID: 1406691914321314157}
-  DashRange: {x: 0, y: 0}
-  atk: {fileID: 8212799595015637120}
 --- !u!61 &6820624083957904159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1202,7 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitTime: 0.15
   slashHit: {fileID: 8630538409918055269, guid: a08eecb50a5240f438f9cecc6ab16af8, type: 3}
-  spRen: {fileID: 0}
+  spRen: {fileID: 5411391830233957102}
 --- !u!114 &7945163163939405816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,7 +1209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   rigid: {fileID: 7334753533225169905}
-  force: 5
+  force: 10
   time: 0.1
 --- !u!114 &6265209249631100793
 MonoBehaviour:
@@ -1248,6 +1224,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expPrefab: {fileID: 2820684935990195507, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
+--- !u!114 &504337691063761879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011362908554364920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e34db376175ee4ab22d5ce84449acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 2
+  die: 0
+  slidHP: {fileID: 1406691914321314157}
+--- !u!114 &6591482803361281871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011362908554364920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa45ae49786bad44b89e4dcf07c5a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initMove: 1
+  right: 0
+  rb: {fileID: 7334753533225169905}
+  anim: {fileID: 6345364025542534374}
+  followRange: {x: 5, y: 5}
+  speed: 2
+  atk: {fileID: 8212799595015637120}
+  atkRange: {x: 3, y: 3}
+  healthEffect: {fileID: 504337691063761879}
 --- !u!1 &9049857118364484355
 GameObject:
   m_ObjectHideFlags: 0

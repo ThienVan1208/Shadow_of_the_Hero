@@ -37,7 +37,8 @@ public class collect : MonoBehaviour
     {
         if(canCollect && Input.GetKeyDown(KeyCode.E))
         {
-            Instantiate(collectAudio);
+            Instantiate(collectAudio);// need item collecting sound
+
             CollectItem(nameItem);
             afterCollect(nameItem);
         }

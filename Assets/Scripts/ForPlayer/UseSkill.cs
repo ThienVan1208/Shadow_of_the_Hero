@@ -18,7 +18,7 @@ public class UseSkill : MonoBehaviour
     private GameObject itemManager;
     public Animator animator;
 
-    public UIIventoryPage invent;
+    //public UIIventoryPage invent;
     void Start()
     {
         isSkill = false;
@@ -55,7 +55,7 @@ public class UseSkill : MonoBehaviour
         {
             checkManaMax = false;
         }
-        manaMax = invent.initMana;
+        manaMax = GameManager.Instance.gm_mana;
         manaSlid.maxValue = manaMax;
         if(checkManaMax)
         {

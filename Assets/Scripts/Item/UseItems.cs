@@ -11,6 +11,7 @@ public class UseItems : MonoBehaviour
     public GameObject HPHealEffect, ManaHealEffect;
     private ItemSlot slot;
     private GameObject itemManager;
+    public HealthEffect healthEffect;
     public void Start()
     {
         itemManager = GameObject.Find("ItemManager");
@@ -35,7 +36,7 @@ public class UseItems : MonoBehaviour
     IEnumerator HPHeal()
     {
         HPHealEffect.SetActive(true);
-        MainControl.hp += volumnOfHP;
+        healthEffect.hp += volumnOfHP;
         yield return new WaitForSeconds(2f);
         HPHealEffect.SetActive(false);
     }

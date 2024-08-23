@@ -831,12 +831,14 @@ GameObject:
   - component: {fileID: 6806229619537332546}
   - component: {fileID: 6032153312062063876}
   - component: {fileID: 4505775466606259617}
-  - component: {fileID: 5992242160431095839}
   - component: {fileID: 2344177911873815982}
   - component: {fileID: 4298621979810781379}
   - component: {fileID: 2459676791407048736}
   - component: {fileID: 3720887496165346713}
   - component: {fileID: 3174466188675153808}
+  - component: {fileID: 9178074638512717002}
+  - component: {fileID: 6483852517892434977}
+  - component: {fileID: 4924414083622114499}
   m_Layer: 0
   m_Name: SlimeBlue
   m_TagString: Untagged
@@ -936,31 +938,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5992242160431095839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5793298133032421970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7dc53503dea3a9428ed03d4a9f9e08c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 3
-  animator: {fileID: 4505775466606259617}
-  rb: {fileID: 4298621979810781379}
-  isFollowing: 0
-  init_left: 0
-  init_right: 0
-  atkRange: {x: 3, y: 3}
-  followRange: {x: 5, y: 5}
-  health: 1.5
-  slid: {fileID: 2308008234481700733}
-  DashRange: {x: 0, y: 0}
-  atk: {fileID: 5662154255383652414}
 --- !u!114 &2344177911873815982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,7 +950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6c92ea802823c408bdad9b263c4cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atk: {fileID: 0}
+  atk: {fileID: 4743667798062018296}
   die: {fileID: 6597048654619562454}
   hit: {fileID: 2268746440232503117}
   walk: {fileID: 0}
@@ -1068,6 +1045,57 @@ MonoBehaviour:
   rigid: {fileID: 4298621979810781379}
   force: 5
   time: 0.1
+--- !u!114 &9178074638512717002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5793298133032421970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa45ae49786bad44b89e4dcf07c5a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initMove: 1
+  right: 0
+  rb: {fileID: 4298621979810781379}
+  anim: {fileID: 4505775466606259617}
+  followRange: {x: 5, y: 5}
+  speed: 4
+  atk: {fileID: 5662154255383652414}
+  atkRange: {x: 3, y: 3}
+  healthEffect: {fileID: 6483852517892434977}
+--- !u!114 &6483852517892434977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5793298133032421970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e34db376175ee4ab22d5ce84449acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 2
+  die: 0
+  slidHP: {fileID: 2308008234481700733}
+--- !u!114 &4924414083622114499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5793298133032421970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92dc544f09660fd44bd1d14928a98fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitTime: 0.15
+  slashHit: {fileID: 8630538409918055269, guid: a08eecb50a5240f438f9cecc6ab16af8, type: 3}
+  spRen: {fileID: 6032153312062063876}
 --- !u!1 &6572106186927400790
 GameObject:
   m_ObjectHideFlags: 0

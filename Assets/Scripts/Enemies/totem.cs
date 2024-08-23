@@ -3,169 +3,117 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class totem : MonoBehaviour
+public class totem : Enemy
 {
-    private Vector2 getScale;
-
-    public static float damage = 0.001f;
-
-    public GameObject player;
-    public float speed = 3f;
-    public Animator animator;
-    
-    public bool isFollowing = false;
-    public Coroutine currentRoutine;
-
-    // to detect direction of attacking
-    protected bool left = true, right = false;
-    protected bool die = false;
-
-    private bool isATK = false;
-    // HEALTH
-    public float health;
-
-    public Slider slid;
-
-    public GameObject fireBall;
-    public Vector2 atkRange;
-
-
-    public void Start()
+    // Start is called before the first frame update
+    public GameObject fireATK;
+    private bool activeDodge;
+    public GameObject explosion, fireThunderShoot;
+    public bool getEplosion; //{  get; private set; }
+   
+    void Start()
     {
-        GameManager.Instance.Boss = true;
-        player = GameObject.FindGameObjectWithTag("Player");
-        animator = GetComponent<Animator>();
-
-        getScale = transform.localScale;
-
-       
-
-        animator.SetTrigger("Start");
-
-        slid.maxValue = health;
-        slid.value = health;
-        
-
-
+        anim.SetTrigger("Start");
+        base.Start();
+        isATK = false;
+        getEplosion = false;
     }
-    
 
     // Update is called once per frame
     void Update()
     {
-        if (!die)
+       if(!healthEffect.die)
         {
-            Direction();
-            if (currentRoutine == null)
+            base.InitDirect();
+            base.DirectTowardPlayer();
+            Vector2 dis = player.transform.position - transform.position;
+            if(Mathf.Abs(dis.x) <= atkRange.x && Mathf.Abs(dis.y) <= atkRange.y)
             {
-                if (!die)
+                if(currCo == null && !isATK)
                 {
-                    currentRoutine = StartCoroutine(ManageAttack());
+                    currCo = StartCoroutine(Attack());
                 }
             }
-            if(!GameManager.Instance.Boss)
+            if(getEplosion)
             {
-                Die();
+                getEplosion = false;
+                StopAllCoroutines();
+                anim.SetTrigger("die");
+                StartCoroutine(GetExplosion());
             }
-        }
+        } 
     }
 
-    public void Direction()
+    public override IEnumerator Attack()
     {
-        if (transform.position.y < player.transform.position.y)
+        isATK = true;
+        Vector2 dis = player.transform.position - transform.position;
+        if (Mathf.Abs(dis.x) <= atkRange.x && Mathf.Abs(dis.y) <= atkRange.y)
         {
-            GetComponent<SpriteRenderer>().sortingOrder = 10;
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().sortingOrder = 4;
-        }
-        if (transform.position.x >= player.transform.position.x)
-        {
-            left = true;
-            right = false;
-        }
-        else
-        {
-            left = false;
-            right = true;
-        }
+            float radAngle = Mathf.Atan2(dis.y, dis.x);
+            float degAngle = radAngle / Mathf.Deg2Rad;
 
-        if (!isATK)
-        {
-            
-            if (left && !right)
-            {
-                transform.localScale = new Vector2(-getScale.x, getScale.y);
-            }
-            if (right && !left)
-            {
-                transform.localScale = new Vector2(getScale.x, getScale.y);
-            }
+            anim.SetTrigger("attack");
+            Instantiate(fireATK, transform.position, Quaternion.Euler(0, 0, degAngle));
         }
-    }
-    private IEnumerator ManageAttack()
-    {
-        if (!die)
-        {
-            yield return new WaitForSeconds(2f);
-            attack();
-        }
+        rb.velocity = Vector2.zero;
         
-    }
-    public void attack()
-    {
-        if (!die)
-        {
-            Vector2 dis = player.transform.position - transform.position;
-            if (Mathf.Abs(dis.x) <= atkRange.x && Mathf.Abs(dis.y) <= atkRange.y)
-            {
-                Vector2 follow = player.transform.position - transform.position;
-                float radAngle = Mathf.Atan2(follow.y, follow.x);
-                float degAngle = radAngle / Mathf.Deg2Rad;
-
-                animator.SetTrigger("Atk");
-                Instantiate(fireBall, transform.position, Quaternion.Euler(0, 0, degAngle));
-            }
-            currentRoutine = null;
-        }
-    }
-    public void takeDAM(float take_damage)
-    {
-        if (die) return;
-        health -= take_damage;
-        sliderOfHP(health);
-        if (health < 0) health = 0;
-        if (health <= 0)
-        {
-            die = true;
-            animator.SetTrigger("die");
-        }
-
+        yield return new WaitForSeconds(1f);
+        isATK = false;
+        currCo = null;
+        
 
     }
-    public void sliderOfHP(float hp)
+
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        slid.value = hp;
+        base.OnTriggerEnter2D(collision);
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (die) return;
-        if (collision.gameObject.CompareTag("skill"))
-        {
-            takeDAM(fire.damage);
+        base.OnTriggerStay2D(collision);
+    }
 
-        }
 
-        if (collision.gameObject.CompareTag("AttackRange"))
+    public IEnumerator GetExplosion()
+    {
+        Instantiate(explosion,transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.3f);
+        
+        //yield return new WaitForSeconds(0.533f);
+        Vector2 dis = player.transform.position - transform.position;
+        if (Mathf.Abs(dis.x) <= atkRange.x && Mathf.Abs(dis.y) <= atkRange.y)
         {
-            takeDAM(MainControl.damage);
+            Vector2 follow = player.transform.position - transform.position;
+            float radAngle = Mathf.Atan2(follow.y, follow.x);
+            float degAngle = radAngle / Mathf.Deg2Rad;
+            Instantiate(fireThunderShoot, transform.position, Quaternion.Euler(0, 0, degAngle));
         }
     }
-    public void Die()
+    public IEnumerator TotemDie()
     {
-        BossDae.countTotem++;
+        
+        yield return new WaitForSeconds(1.33f);
         gameObject.SetActive(false);
     }
+    public void DieOfTotem()
+    {
 
+        isATK = false;
+        rb.velocity = Vector2.zero;
+        gameObject.SetActive(false);
+        BossDae.countTotem++;
+    }
+    public void OnEnable()
+    {
+        Debug.Log("enable");
+        healthEffect.hp = healthEffect.slidHP.maxValue;
+        healthEffect.slidHP.value = healthEffect.slidHP.maxValue;
+        healthEffect.die = false;
+        currCo = null;
+    }
 }
+
+    
+
+

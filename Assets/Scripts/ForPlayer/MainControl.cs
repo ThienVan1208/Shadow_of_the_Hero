@@ -5,24 +5,16 @@ using UnityEngine.UI;
 [System.Serializable]
 public class MainControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    //public static MainControl instance;
-
-    private Rigidbody2D rigid;
-    private Animator animator;
+    public Rigidbody2D rigid;
+    public Animator animator;
 
     public float speedRun = 10f;
 
-    public bool is_death;
-    
-    public static float hp = 10f;
     public static float damage = 0.5f;
 
     public static bool getATK1, getATK2, getATK3;
 
     public static bool isAttacking = false;
-
-    public Slider slidHP;
 
     public bool dieOnce = false;
     public Vector2 getScale;
@@ -39,21 +31,19 @@ public class MainControl : MonoBehaviour
     public bool ATKForUI = false;
 
     public UIIventoryPage increaseInfo;
-    
+
+    public HealthEffect healthEffect;
  
     void Start()
     {
-        hp = GameManager.Instance.gm_hp;
         damage = GameManager.Instance.gm_atk / 5;
-        rigid = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        
+       
         getScale.x = transform.localScale.x;
         getScale.y = transform.localScale.y;
-       
-        is_death = false;
-        slidHP.maxValue = hp;
-        slidHP.value = hp;
+
+        healthEffect.hp = GameManager.Instance.gm_hp;
+        healthEffect.InitSlidHP();
+
         getATK1 = false;
         getATK2 = false;
         getATK3 = false;
@@ -64,44 +54,48 @@ public class MainControl : MonoBehaviour
     private void Update()
     {
         
-        if (!is_death)
+        if (!healthEffect.die)
         {
             if (!ATKForUI)
             {
                 attack();
-            } 
+            }
 
-                if (!isAttacking)
+            if (!isAttacking)
+            {
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
                 {
-                    if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                    transform.localScale = new Vector2(-getScale.x, getScale.y);
+                }
+                if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                {
+                    transform.localScale = getScale;
+                }
+                if (!isDashing)
+                {
+                    move();
+                    if (Input.GetKeyDown(KeyCode.V))
                     {
-                        transform.localScale = new Vector2(-getScale.x, getScale.y);
-                    }
-                    if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-                    {
-                        transform.localScale = getScale;
-                    }
-                    if (!isDashing)
-                    {
-                        move();
-                        if (Input.GetKeyDown(KeyCode.V))
-                        {
-                            Dash();
-                        }
+                        Dash();
                     }
                 }
+            }
+
             enhanceStreght();
-            sliderOfHP(hp);
-    }
+            healthEffect.SliderOfHP(healthEffect.hp);// update hp every frame
+            healthEffect.LimitHP();
+        }
         
-}
+    }
    public void enhanceStreght()
     {
         if(damage != GameManager.Instance.gm_atk)
-            damage = (float)increaseInfo.initATK / 5;
+            damage = (float)GameManager.Instance.gm_atk / 5;
 
-        if(slidHP.maxValue != GameManager.Instance.gm_hp)
-            slidHP.maxValue = increaseInfo.initHP;
+        if (healthEffect.slidHP.maxValue != GameManager.Instance.gm_hp)
+        {
+            healthEffect.EnhanceHP(GameManager.Instance.gm_hp);
+        }
         
     }
     void move()
@@ -120,7 +114,7 @@ public class MainControl : MonoBehaviour
         movement = new Vector2(horizontalMove, verticalMove);
 
         rigid.velocity = movement * speedRun;
-        //transform.Translate(movement * speedRun * Time.deltaTime);
+        
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
     }
@@ -133,7 +127,7 @@ public class MainControl : MonoBehaviour
                 if (!getATK1)
                 {
                     getATK1 = true;
-                    //Audio.sound.swordSlash();
+                   
                     animator.SetTrigger("ATK1");
                 }
 
@@ -147,7 +141,6 @@ public class MainControl : MonoBehaviour
         isDashing = true;
         
         animator.SetTrigger("FlipDash");
-        //rigid.AddForce(new Vector2(transform.localScale.x * dashSpeed, rigid.velocity.y), ForceMode2D.Impulse);
         rigid.velocity = new Vector2(transform.localScale.x * dashSpeed + rigid.velocity.x , rigid.velocity.y);
         StartCoroutine(StopDash());
     }
@@ -164,12 +157,11 @@ public class MainControl : MonoBehaviour
     }
     public void takeDMG(float take_damage)
     {
-        hp -= take_damage;
+        healthEffect.takeDMG(take_damage);
         GetComponent<SoundForMain>().Hit();
-        sliderOfHP(hp);
-        if (hp <= 0)
+        
+        if (healthEffect.hp <= 0)
         {
-            /////////////////////////////////////////////////////////////
             if (!introUse)
             {
                 if (!dieOnce)
@@ -177,7 +169,7 @@ public class MainControl : MonoBehaviour
                     animator.SetTrigger("Die");
                     dieOnce = true;
                 }
-                is_death = true;
+                healthEffect.die = true;
             }
             else
             {
@@ -186,36 +178,19 @@ public class MainControl : MonoBehaviour
             
         }
     }
-    public void sliderOfHP(float val)
-    {
-        slidHP.value = val;
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyATK"))
         {
-            takeDMG(Enemy.damage);
+            
             takeDMG(BossMino.damage);
             takeDMG(BossDae.damage);
             takeDMG(fakeChar.damage);
         }
         
     }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Enemy")) 
-        {
-            rigid.velocity = Vector2.zero;
-        }
-    }
-    void HealthUI()
-    {
-        if (slidHP != null)
-        {
-            slidHP.maxValue = hp;
-            slidHP.value = hp;
-        }
-    }
+    
+    
     public void over()
     {
         if (!introUse)
@@ -226,7 +201,7 @@ public class MainControl : MonoBehaviour
 
     void OnEnable()
     {
-        HealthUI(); 
+        healthEffect.InitSlidHP();
     }
 
     public void TimeLineAfterDie()

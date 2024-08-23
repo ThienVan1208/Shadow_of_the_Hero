@@ -910,11 +910,12 @@ GameObject:
   - component: {fileID: 5299968855901122564}
   - component: {fileID: 2502409513198709509}
   - component: {fileID: 2949826230421202217}
-  - component: {fileID: 9139066420598511930}
   - component: {fileID: 3108645092714910603}
   - component: {fileID: 3912592684242772823}
   - component: {fileID: 5121420521859276968}
   - component: {fileID: 256447789666899969}
+  - component: {fileID: 6117496545206469382}
+  - component: {fileID: 7480567935985590544}
   m_Layer: 0
   m_Name: Imper
   m_TagString: Untagged
@@ -1085,31 +1086,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.57600594, y: 0.49162674}
   m_EdgeRadius: 0
---- !u!114 &9139066420598511930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342104447030811070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20dcb15092bfe724e8156ace0cbe270f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 3
-  animator: {fileID: 5299968855901122564}
-  rb: {fileID: 2502409513198709509}
-  isFollowing: 0
-  init_left: 0
-  init_right: 0
-  atkRange: {x: 10, y: 10}
-  followRange: {x: 5, y: 5}
-  health: 3
-  slid: {fileID: 7596741986512309552}
-  DashRange: {x: 0, y: 0}
-  fireATK: {fileID: 1420967357458411086, guid: b6cc08dfeb951964599606350c2f6748, type: 3}
 --- !u!114 &3108645092714910603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,7 +1100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitTime: 0.15
   slashHit: {fileID: 8630538409918055269, guid: a08eecb50a5240f438f9cecc6ab16af8, type: 3}
-  spRen: {fileID: 0}
+  spRen: {fileID: 4569399141065400757}
 --- !u!114 &3912592684242772823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,6 +1146,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expPrefab: {fileID: 2820684935990195507, guid: ab473726014ad3f46bb3ba566254b680, type: 3}
+--- !u!114 &6117496545206469382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342104447030811070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5fc7de4b802b8479f208dcdcff3fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initMove: 0
+  right: 0
+  rb: {fileID: 2502409513198709509}
+  anim: {fileID: 5299968855901122564}
+  followRange: {x: 6, y: 6}
+  speed: 3
+  atk: {fileID: 0}
+  atkRange: {x: 11, y: 11}
+  healthEffect: {fileID: 7480567935985590544}
+  fireATK: {fileID: 1420967357458411086, guid: b6cc08dfeb951964599606350c2f6748, type: 3}
+--- !u!114 &7480567935985590544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342104447030811070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e34db376175ee4ab22d5ce84449acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3
+  die: 0
+  slidHP: {fileID: 7596741986512309552}
 --- !u!1 &7725554152730465286
 GameObject:
   m_ObjectHideFlags: 0

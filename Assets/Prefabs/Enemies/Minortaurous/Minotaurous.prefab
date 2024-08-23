@@ -379,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitTime: 0.15
   slashHit: {fileID: 8630538409918055269, guid: a08eecb50a5240f438f9cecc6ab16af8, type: 3}
-  spRen: {fileID: 0}
+  spRen: {fileID: 2029357011359066567}
 --- !u!1 &2607766871268844278
 GameObject:
   m_ObjectHideFlags: 0
